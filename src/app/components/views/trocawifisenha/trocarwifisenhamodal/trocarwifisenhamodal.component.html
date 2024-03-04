@@ -1,0 +1,27 @@
+<button class="mat-elevation-z8" color="primary" mat-button [mat-dialog-close] (click)="fecharModal()">X</button>
+<h3>Resultado</h3>
+
+<div class="result-row">
+  <label for="resultMessage">Message:</label>
+  <textarea id="resultMessage" rows="1" cols="50" readonly>{{ trocarwifisenhaSshresult.message }}</textarea>
+</div>
+
+<div class="result-row">
+  <label for="resultWifi">Nome WIFI:</label>
+  <input type="text" id="resultWifi" [value]="trocarwifisenhaSshresult.wifi" readonly>
+</div>
+
+<div class="result-row">
+  <label for="resultSenha">Senha WIFI:</label>
+  <input type="text" id="resultSenha" [value]="trocarwifisenhaSshresult.senhawifi" readonly>
+</div>
+
+<div class="result-row">
+  <label for="resultSSH">Resultado SSH:</label>
+  <textarea id="resultSSH" rows="10" cols="50" readonly>{{ trocarwifisenhaSshresult.sshResults }}</textarea>
+</div>
+
+<button class="mat-elevation-z8" color="primary" mat-button [mat-dialog-close] (click)="fecharModal()">FECHAR</button>
+
+
+

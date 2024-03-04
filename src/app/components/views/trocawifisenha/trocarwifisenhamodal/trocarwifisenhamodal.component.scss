@@ -1,0 +1,16 @@
+.result-row {
+    margin-bottom: 10px;
+  }
+  
+  #resultSSH {
+    height: 220px;
+    width: 100%;
+    resize: vertical;
+  }
+
+  .result-row label[for="resultMessage"] {
+    min-width: 150px; /* Defina a largura mínima desejada */
+  }
+  .result-row textarea#resultMessage {
+    resize: none;
+  }

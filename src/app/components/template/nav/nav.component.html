@@ -1,0 +1,34 @@
+<mat-sidenav-container class="container">
+    <mat-sidenav mode="side" opened>
+        <mat-nav-list>
+            <a routerLink=""mat-list-item>
+                <i class="material-icons">home</i>
+                Home
+            </a>
+            <a routerLink="/transmissores" mat-list-item>
+                <i class="material-icons">square</i>
+                TRANSMISSOR
+            </a>
+            <a routerLink="/users" mat-list-item>
+                <i class="material-icons">square</i>
+                USERS
+            </a>
+            <a routerLink="/massiva" mat-list-item>
+                <i class="material-icons">square</i>
+                Abrir OS massiva
+            </a>
+            <a routerLink="/trocar-wifi-senha" mat-list-item>
+                <i class="material-icons">square</i>
+                Trocar WIFI
+            </a>
+
+
+
+
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+
+</mat-sidenav-container>

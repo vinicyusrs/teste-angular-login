@@ -1,0 +1,81 @@
+<div class="outer-container">
+  <div class="content">
+    <div class="title">
+      <h2>Trocar Nome e Senha do WIFI</h2>
+    </div>
+  </div>
+
+  <div class="form-container">
+    <div class="form-group col-md-7 col-sm-3 mt-1 mb-1">
+      <div class="input-group col-md-6 col-sm-6">
+        <input type="text" [(ngModel)]="find_by_mac.mac" type="text" name="mac" placeholder="MAC - EX: xx:99:xx:99:xx" aria-describedby="button-addon2" required="required" class="form-control"> 
+        <button type="button" (click)="pesquisar()" class="btn btn-outline-primary">Pesquisar</button>
+      </div>
+    </div>
+
+    <div class="form-container" *ngIf="mostrarFormulario">
+      <div class="form-row">
+        <div class="form-field">
+          <label class="form-label">Nome OLT</label>
+          <mat-form-field class="form-input">
+            <input matInput [(ngModel)]="find_by_mac.olt" type="text" name="olt" disabled>
+          </mat-form-field>
+        </div>
+        <div class="form-field">
+          <label class="form-label">Serial</label>
+          <mat-form-field class="form-input"> 
+            <input matInput [(ngModel)]="find_by_mac.serial" type="text" name="serial" disabled>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-field">
+          <label class="form-label">ID Cliente</label>
+          <mat-form-field class="form-input">   
+            <input matInput [(ngModel)]="find_by_mac.idPort" type="text" name="idPort" disabled>
+          </mat-form-field>
+        </div>
+        <div class="form-field">
+          <label class="form-label">Posicao Completa</label>
+          <mat-form-field class="form-input">
+            <input matInput [(ngModel)]="find_by_mac.posicaoCompleta" type="text" name="posicaoCompleta" disabled>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-field">
+          <label class="form-label">IP</label>
+          <mat-form-field class="form-input">
+            <input matInput [(ngModel)]="find_by_mac.hostname" type="text" name="hostname" disabled>
+          </mat-form-field>
+        </div>
+        <div class="form-field">
+          <label class="form-label">MAC</label>
+          <mat-form-field class="form-input">
+            <input matInput [(ngModel)]="find_by_mac.mac" type="text" name="mac" disabled>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label class="form-label">Nome WIFI</label>
+          <mat-form-field class="form-input">
+            <input matInput [(ngModel)]="trocarwifisenha.wifi" type="text" name="wifi" required>
+          </mat-form-field>
+        </div>
+        <div class="form-field">
+          <label class="form-label">Senha WIFI</label>
+          <mat-form-field class="form-input">
+            <input matInput [(ngModel)]="trocarwifisenha.senhawifi" type="text" name="senhawifi" pattern="[a-zA-Z0-9]+" minlength="8" required>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <mat-progress-bar *ngIf="enviandoDados" mode="indeterminate"></mat-progress-bar>
+      <div class="buttons">
+        <button class="mat-elevation-z8" (click)="executar()" [disabled]="!trocarwifisenhaValido() || enviandoDados" mat-stroked-button color="primary">EXECUTAR</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,75 @@
+
+<div class="conteudo-login">
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+
+  
+
+
+    <div class="form-group pt-3 wider-input">
+      <label for="email" class="input-label">Email</label>
+      <div class="input-wrapper">
+        <span class="fa fa-user"></span>
+        <input formControlName="email" type="text" placeholder="Username" required>
+      </div>
+    </div>
+    <small *ngIf="loginForm.controls['email'].dirty && loginForm.hasError('required','email')" class="text-danger">*Email é Requerido*</small>
+
+
+    <div class="form-group pt-3 wider-input">
+      <label for="password" class="input-label">Password</label>
+      <div class="input-wrapper">
+        <span class="fa fa-lock"></span>
+        <input formControlName="password" type="password" id="password" placeholder="Password">
+      </div>
+    </div>
+      
+    <small *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password')" class="text-danger">*Senha é Requerido*</small>
+
+ 
+
+ 
+    <button type="submit" class="mat-elevation-z8" mat-stroked-button color="primary">LOGIN</button>
+  
+
+  </form>
+</div>
+
+
+
+
+
+<!--
+
+  <form class="conteudo-form" (ngSubmit)="userLogin()">
+
+[(ngModel)]="user.email" class="form-control"
+[(ngModel)]="user.password" class="form-control"
+
+<div class="conteudo-login">
+  <form class="conteudo-form" [formGroup]="loginForm" (submit)="submitLogin()">
+    <div class="logo">
+      Vi Raizel
+    </div>
+    <div>
+      <div>
+        <input class="input-login" placeholder="email" formControlName="username"/>
+      </div>
+      <div class="mensagem-erro" *ngIf="loginForm.get('username')?.errors?.['required'] && loginForm.get('username')?.touched">
+        Campo Obrigatório!
+      </div>
+    </div>
+    <div>
+      <div>
+        <input class="input-login" type="password" placeholder="password" formControlName="password"/>
+      </div>
+      <div class="mensagem-erro" *ngIf="loginForm.get('password')?.errors?.['required'] && loginForm.get('password')?.touched">
+        Campo Obrigatório!
+      </div>
+    </div>
+    <div>
+      <button class="input-submit" [disabled]="!loginForm.valid"> LOGAR</button>
+    </div>
+  </form>
+</div>
+-->

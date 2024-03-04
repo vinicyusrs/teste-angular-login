@@ -1,0 +1,42 @@
+<form>
+    <h1>DELETANDO TRANSMISSOR</h1>
+
+
+    <mat-form-field class="form">
+        <mat-label>IP</mat-label>
+        <input matInput [(ngModel)]="transmissores.ip" type="text" name="ip" disabled>
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Descrição1</mat-label>
+        <textarea matInput [(ngModel)]="transmissores.descricao1" type="text" name="descricao1" disabled></textarea>
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Descrição2</mat-label>
+        <textarea matInput [(ngModel)]="transmissores.descricao2" type="text" name="descricao2" disabled></textarea>
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>POP</mat-label>
+        <textarea matInput [(ngModel)]="transmissores.pop" type="text" name="pop" disabled></textarea>
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Cidade</mat-label>
+        <textarea matInput [(ngModel)]="transmissores.cidade" type="text" name="cidade" disabled></textarea>
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>MarcaOLT</mat-label>
+        <textarea matInput [(ngModel)]="transmissores.marcaolt" type="text" name="marcaolt" disabled></textarea>
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>ID PROJETO IXC</mat-label>
+        <textarea matInput [(ngModel)]="transmissores.id_projeto_ixc" type="number" name="id_projeto_ixc" disabled></textarea>
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>ID TRANSMISSOR IXC</mat-label>
+        <textarea matInput [(ngModel)]="transmissores.id_transmissor_ixc" type="number" name="id_transmissor_ixc" disabled></textarea>
+    </mat-form-field>
+
+    <div class="buttons">
+        <button (click)="delete()" cloclass="mat-elevation-z8" mat-stroked-button color="primary">DELETAR</button>
+        <button (click)="cancel()" class="mat-elevation-z8" mat-stroked-button color="warn">CANCELAR</button>
+    </div>
+</form>
